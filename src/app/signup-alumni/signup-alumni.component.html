@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Baker Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+ 
+  <!-- =======================================================
+  * Template Name: Baker - v4.3.0
+  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+          <li><a class="nav-link scrollto" href="#contact">Alumni</a></li>
+        </ul>
+        
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Pricing Section ======= -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section">
+          <h1 style="text-align: center;">SIGN UP</h1>
+          
+        </div>
+
+        <div class="row">
+
+   
+
+          <div class="">
+            <form  role="form" [formGroup]="alumniForm" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" formControlName="fname" name="fname" class="form-control" id="fname" [(ngModel)]="alumni.fname"  placeholder="First Name" required>
+                  <small *ngIf="(alumni.fname == null || alumni.fname == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+               
+                <div class="col-md-6 form-group">
+                  <input type="text" formControlName="lname" name="lname" class="form-control" id="lname" [(ngModel)]="alumni.lname" placeholder="Last Name" required>
+                  <small *ngIf="(alumni.lname == null || alumni.lname == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                <br><br><br>
+                
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" formControlName="email"[(ngModel)]="alumni.email"  class="form-control" name="email" id="email" placeholder="Email" required>
+                  <small *ngIf="!isMail && (alumni.email != null && alumni.email != undefined)" style="color: red;"> Invalid  </small>
+                  <small *ngIf="(alumni.email == null || alumni.email == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <input type="text" name="contact" formControlName="contact" class="form-control" id="contact" [(ngModel)]="alumni.contact" placeholder="Mobile Number" required>
+                  <small *ngIf="(alumni.contact == null || alumni.contact == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                
+                <br><br><br>
+                
+                <div class="col-md-6 form-group">
+                  <p>Gender</p><input type="radio" formControlName="gender" name="gender" [(ngModel)]="alumni.gender" value="male"> Male
+                  <input type="radio" name="gender" formControlName="gender" [(ngModel)]="alumni.gender" value="female"> Female
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="dob">DOB</label>&nbsp;&nbsp;
+                  <input type="date" formControlName="dob" name="dob" id="dob" name="dob" [(ngModel)]="alumni.dob">
+                  <small *ngIf="(alumni.dob == null || alumni.dob == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                <br><br><br>
+                <div class="col-md-6 form-group">
+                  <textarea class="form-control" formControlName="message" name="message" rows="5" placeholder="Address" [(ngModel)]="alumni.message" required></textarea>
+                  <small *ngIf="(alumni.message == null || alumni.message == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                
+                <br><br><br><br><br><br>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="city" formControlName="city" class="form-control" id="city" [(ngModel)]="alumni.city" placeholder="City" required>
+                  <small *ngIf="(alumni.city == null || alumni.city == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                <br><br><br>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="pincode" formControlName="pincode" class="form-control" id="pincode" [(ngModel)]="alumni.pincode" placeholder="Pincode" required>
+                  <small *ngIf="(alumni.pincode == null || alumni.pincode == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+
+
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="state" class="form-control" formControlName="state" name="state" id="state" [(ngModel)]="alumni.state" placeholder="State" required>
+                  <small *ngIf="(alumni.state == null || alumni.state == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                <br><br><br>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="district" class="form-control" formControlName="district"  name="district" id="district" [(ngModel)]="alumni.district" placeholder="District" required>
+                  <small *ngIf="(alumni.district == null || alumni.district == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+                
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="password" formControlName="password" class="form-control" name="password" id="password" [(ngModel)]="alumni.password" placeholder="Password" required>
+                  <small *ngIf="(alumni.password == null || alumni.password == undefined) && submitted" style="color: red;">*Required  </small>
+                  
+                </div>
+              </div>
+              
+              <br><br><br><br>
+              <div class="text-center">
+                <button type="submit" (click)="register()" class="btn btn-primary btn-block">Create Account</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
+      <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  
+
+</body>
+
+</html>
